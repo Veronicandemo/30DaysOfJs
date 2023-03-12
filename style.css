@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color:  #fcc419;
+}
+.heading{
+    text-align: center;
+    margin-top: 15%;
+}
+h1{
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+p{
+    font-size: 65px;
+    letter-spacing: 40px;
+    font-weight: 500;
+}
