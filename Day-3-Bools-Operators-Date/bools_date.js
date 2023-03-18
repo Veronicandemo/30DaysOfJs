@@ -114,4 +114,68 @@ console.log(today.getTime())
  const perimeter = `${sidea + sideb + sidec}`
  alert(`The perimeter of the triangle is ${perimeter}`)
 
- 
+ //Calculate the slope, x-intercept and y-intercept of y = 2x -2
+//  Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
+let m;
+let y2 = 10
+let y1 = 2
+let x2 = 6
+let x1 = 2
+m= (y2 - y1)/(x2 - x1)
+console.log(m)
+
+const hour = prompt('Enter hours')
+const hourRate = prompt('Enter rate per hour')
+console.log(`Your weekly earning is ${hour * hourRate}`)
+
+
+//If the length of your name is greater than 7 say, your name is long else say your name is short.
+let mName = 'Ndemo';
+if(mName.length > 7){
+    console.log(`Your name is so long`);
+}else{
+    console.log(`Your name is short`);
+}
+
+//Compare your first name length and your family name length and you should get this output.
+let fiName = 'Asabeneh'
+let laName = 'Yetayeh'
+if(fiName.length > laName.length){
+    console.log(`Your first name, ${fiName} is longer than your family name ${laName}`)
+}
+
+//Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
+
+let ageMine = 250;
+let yourAge = 25
+
+if(ageMine > yourAge){
+    console.log(`I am ${ageMine - yourAge} years older than you`)
+}else{
+    console.log(`How old are you`)
+}
+const birthYear = prompt(`Enter birth year:`)
+console.log(birthYear)
+let currentAge = year - birthYear
+if(currentAge > 18){
+    console.log(`You are ${currentAge}.You are old enough to drive`)
+}else{
+    console.log(`You are ${currentAge}.You will be allowed to drive in ${18 - currentAge} years`)
+}
+
+const atMoment = new Date()
+const currentYear = atMoment.getFullYear()
+const currentMonth = atMoment.getMonth()
+const currentDate = atMoment.getDate()
+const currentHours = atMoment.getHours()
+const currentMinutes = atMoment.getMinutes()
+
+console.log(`${currentYear}-${currentMonth}-${currentDate} ${currentHours}:${currentMinutes}`)
+console.log(`${currentDate}-${currentMonth}-${currentYear} ${currentHours}:${currentMinutes}`)
+console.log(`${currentDate}/${currentMonth}/${currentYear} ${currentHours}:${currentMinutes}`)
+
+/* EXERCISE LEVEL 3 */
+//Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
+//YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+console.log(`${currentYear}/${currentMonth}/${currentDate} 0${currentHours}Hours:0${currentMinutes}Minutes`)
+
