@@ -1,5 +1,5 @@
 'use strict'
-let age = 35
+let age1 = 35
 const gravity = 9.81  // we use const for non-changing values, gravitational constant in  m/s2
 let mass = 72         // mass in Kilogram
 const PI = 3.14       // pi a geometrical constant
@@ -14,10 +14,10 @@ console.log(age, gravity, mass, PI, boilingPoint, bodyTemp)
 const randomNum = Math.floor(Math.random()*10)
 console.log(randomNum)
 
-let firstName = 'Asabeneh'
-let lastName = 'Yetayeh'
+let fName = 'Asabeneh'
+let lName = 'Yetayeh'
 let theCountry = 'Finland'
-let city = 'Helsinki'
+let mycity = 'Helsinki'
 let language = 'JavaScript'
 let job = 'teacher'
 // let age = 250
