@@ -5,6 +5,31 @@
 //   //body of loop
 // }
 
+const countries = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
+]
+
+const webTechs = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]
+
+const mernStack = ['MongoDB', 'Express', 'React', 'Node']
 for(let i = 0; i <= 5; i++){
   // console.log(i) //prints 0 to 5 to console
   console.log(`${i} * ${i}  = ${i * i}`)
@@ -16,7 +41,7 @@ for(let i = 5; i > 0; i--){
 }
 console.log('****************')
 
-const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+const country = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
 const newArr = []
 for(let country = 0; country < countries.length; country++){
   newArr.push(countries[country].toUpperCase())
@@ -159,20 +184,83 @@ console.log('******* for loop of  prime numbers*********')
 
 //9. Use for loop to iterate from 0 to 100 and print only prime numbers
 //Prime numbers are those numbers that have no divisor other than 1 and the number itself
- 
-for(let i = 0; i <= 100; i++){
-  if(i % i === 0 && i % 1 ===0){
+ let w = 1
+for(let i = 1; i <= 100; i++){
+  if(i % i === 0  &&  i / w === 0){
     console.log(i)
   }
 }
 
 //10. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+let summation = 0
+const maxnum = 100
+for(let i = 0; i <= maxnum; i++){
+  sum += i
+}
+console.log(`The sum of all numbers from 0 to 100 is ${sum}`)
 
-// for(let i = 0; i <= 100; i++){
-//   let sum = 0
-//   sum += i
+// 13. Develop a small script which generate array of 5 random numbers
+// const nums = Math.floor(Math.random()*5) +1
+// const numsArr = []
+// for(num  in nums){
+//   console.log(numsArr.push(num.shift()))
 // }
-// console.log(`The sum of all numbers from 0 to 100 is ${sum}`)
 
+console.log(" ****Sum of odd and even ****")
+//Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+let x;
+let sumEven = 0;
+let sumOdd = 0;
+for(i = 0; i <= 100; i++){
+  i % 2 === 0 ? (sumEven += i): sumOdd += i
+}
+console.log(`The sum of all evens from 0 to 100 is ${sumEven}. And the sum of all odds from 0 to 100 is ${sumOdd}. `)
 
+// Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
 
+const numsArr = []
+numsArr.push(sumEven,sumOdd)
+console.log(numsArr)
+
+//13. Develop a small script which generate array of 5 random numbers
+let randomArr = [];
+for (let  i=0, t = 5; i < t; i++) {
+    randomArr.push(Math.round(Math.random() * t))
+}
+console.log(randomArr);
+// const randomNums = Math.trunc(Math.random () *5 ) +1
+// console.log(randomArr.concat(randomNums))
+//14. Develop a small script which generate a six characters random id:
+// const randoms = /[A - Z, 0-9]/i
+// let result = []
+// for(let i =0; i <= randoms.length; i++){
+//   result.push(Math.random() *randoms)
+//   console.log(result)
+// }
+const result = Math.random().toString(36).substring(2,8);
+console.log(result);
+
+//Exercise Level 2
+// Develop a small script which generate any number of characters random id:
+
+const id = Math.random().toString(36)
+console.log(id)
+
+//Using the above countries array, create the following new array.
+
+//Using the above countries array, create an array for countries length'.
+
+// In above countries array, check if there is a country or countries containing the word 'land'.
+//  If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+
+// let landCountries = []
+// const string = 'land'
+// for(let landCountry = 0; landCountries < countries.length; landCountries++){
+
+//   for(landCountry in countries){
+//     if(landCountry.matchAll(/string/g)){
+//       console.log(landCountries.push())
+
+//     }
+//   }
+// }
