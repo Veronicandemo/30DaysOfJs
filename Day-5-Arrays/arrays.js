@@ -67,3 +67,78 @@ console.log(fruitsAndVegetables);
 console.log(fruitsAndVegetables.length);
 //indexof is used to get the index of element in an array
 console.log(fruitsAndVegetables.indexOf("Tomato"));
+
+// Find the last element of the following arrays.
+const arr1 = [3,7,34,90,12]
+const arr2 = [true, "green", "where",12,56]
+
+
+console.log(arr1[arr1.length -1])
+console.log(arr2[arr2.length -1])
+
+// Write a JS program that will join the following array elements into a string
+const myPets = ["Cow", "Python", "Snake", "Dog"];
+const newPetsArr = myPets.join(',') 
+console.log(newPetsArr)
+// Write a JS script to sort the following array items
+
+//merge Sort
+const divingArray = function(array){
+  if(array.length <= 1)
+  return array
+
+  let middle = array.length /2
+  let left = array.slice(0,middle)
+  let right = array.slice(middle)
+
+  return sortingArr(divingArray(left),divingArray(right))
+}
+
+const  sortingArr = function(leftArr, rightArr){
+  let emptyArr = []
+  while(leftArr.length && rightArr.length){
+    if(leftArr[0] <= rightArr[0]){
+      emptyArr.push(leftArr.shift())
+    }else{
+      emptyArr.push(rightArr.shift())
+    }
+  }
+  return [...emptyArr,...leftArr,...rightArr]
+
+}
+const arr3 = [ -5, 9, 5, 3, 2, -3, 6, 8, 4, 1 ];
+console.log(divingArray(arr3))
+// console.log(arr3.sort())
+// Write a program to remove duplicates from the following array.
+// Console the array without duplicates, and console another array that only contains the duplicates
+const arrFruits = ["apple", "mango", "apple", "orange", "mango", "mango"];
+// arr.forEach(function(element, index, array){
+//   console.log(`${element} - ${index} - ${arr.indexOf(element)}`)
+// })
+let withoutDup = arrFruits.filter(function(element, index){
+  return arrFruits.indexOf(element) === index
+})
+console.log(withoutDup)
+let withDup = arrFruits.filter(function(element, index){
+  return arrFruits.indexOf(element) !== index
+})
+console.log(withDup)
+// Write a JS script to search for the following word in the array 4
+// If the word is present, console it else console "the search word was not found"
+let arr5 = ["the", "way", "x", 4, 23];
+let letter = 4
+if(arr5.includes(letter)){
+console.log(letter)
+}else{
+  console.log(`The search word not found`)
+}
+
+// Write a JS script to sort the following string
+let word = "lufituaeb"
+// const wordArr = word.split('')
+// const sortedWord = wordArr.sort()
+// console.log(sortedWord.join(''))
+//one Line
+const sorted = word.split('').sort().join('')
+console.log(sorted)
+// arr.match(/4/g)
