@@ -239,7 +239,43 @@ BodyMassIndex(160, 3)
 //14. Write a function called checkSeason, 
 // it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
 
-const checkSeason = () => {
+const checkSeason = (month) => {
+    switch(month){
+        case 'December':
+        case 'January':
+        case 'February':
+        console.log(`Its Winters`)
+        break;
+        case 'March':
+        case 'April':
+        case 'May':
+            console.log('Its Spring')
+            break;
+        case 'June':
+        case 'July':
+        case 'August':
+        console.log('Its Summer')
+            break;
+        case 'September':
+        case  'October':
+        case 'November':
+            console.log('Its Autum')
+            break;
+        default:
+            console.log('Invalid Month')
+    }
     
 }
+checkSeason('January')
+checkSeason('March')
+checkSeason('June')
+checkSeason('July')
+checkSeason('')
 
+//15. Math.max returns its largest argument.
+//  Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
+
+
+// const findMax =  function (arg1, arg2, arg3){
+    
+// }
