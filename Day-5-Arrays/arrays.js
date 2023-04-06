@@ -142,3 +142,60 @@ let word = "lufituaeb"
 const sorted = word.split('').sort().join('')
 console.log(sorted)
 // arr.match(/4/g)
+
+
+//The map method
+const array5 = [1,4,9,16]
+const map1 = array5.map(x => x * 3)
+console.log(map1)
+
+
+///makes a copy of the original array but does not alter the original array
+const nummberss = [1,4,9]
+const map3 = nummberss.map((num) => Math.sqrt(num))
+console.log(map3) //1,2,3
+console.log(nummberss) //1,4,9
+
+let multnumbers =  [65, 44, 12, 4]
+const newNumbers = multnumbers.map((number) => number * 10)
+console.log(newNumbers)
+
+// This example uses the array map() method and returns the square of the array element. 
+let arrY = [2, 5, 6, 3, 8, 9];
+let squares = arrY.map(num => num*num)
+console.log(squares)
+let modifier = arrY.map(element => element*3)
+console.log(modifier)
+
+
+
+//CHALLANGE
+let users = [
+  {firstName : "Susan", lastName: "Steward"},
+  {firstName : "Daniel", lastName: "Longbottom"},
+  {firstName : "Jacob", lastName: "Black"}
+];
+/*
+Use the map method to create a new array 
+called userEmails that creates email addresses 
+for each of the users in the users array. The 
+results should look like this:
+
+["SusanSteward@smallcompany.com", 
+ "DanielLongbottom@smallcompany.com", 
+ "JacobBlack@smallcompany.com"]
+
+For bonus points, render the email addresses in all 
+lowercase letters, like this:
+
+["susansteward@smallcompany.com", 
+ "daniellongbottom@smallcompany.com", 
+ "jacobblack@smallcompany.com"] 
+
+*/
+let userEmails = users.map((element,index,arr) => {
+
+   return `${element.firstName}@${element.lastName}`
+})
+ 
+console.log(userEmails)

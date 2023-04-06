@@ -264,3 +264,37 @@ console.log(id)
 //     }
 //   }
 // }
+
+
+///LEVEL 3 EXERSICE
+// Copy countries array(Avoid mutation)
+const countriesCopy = [...countries]
+console.log(countries)
+console.log(countriesCopy)
+
+//Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountrie
+const sortedCountries = countries
+console.log(sortedCountries)
+
+//Sort the webTechs array and mernStack array
+console.log(webTechs.sort())
+console.log(mernStack.sort())
+
+// Extract all the countries contain the word 'land' from the countries array and print it as array
+
+// const landarr = function(countries){
+//   countries.forEach(element => {
+//     const newArr = []
+//     if(element.contains('')){
+//       newArr.push(element)
+//     }
+//   });
+// }
+// console.log(landarr(countries))
+
+//Find the country containing the hightest number of characters in the countries array
+// const highestChar = function(countries){
+//   countries.forEach(function(element, _,_){
+//     if(element.length)
+//   })
+// }

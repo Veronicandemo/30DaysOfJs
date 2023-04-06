@@ -279,3 +279,98 @@ checkSeason('')
 // const findMax =  function (arg1, arg2, arg3){
     
 // }
+
+// Exercises: Level 2
+//1. Linear equation is calculated as follows: ax + by + c = 0. 
+// Write a function which calculates value of a linear equation, solveLinEquation.
+const solveLinEquation = function (a,b,x,y){
+    //ax +by = c
+    //c is the value of the eqauation
+    return (a*x) + (b*y)
+}
+console.log(solveLinEquation(2,3,4,6))
+
+
+// Quadratic equation is calculated as follows: ax2 + bx + c = 0. 
+//2. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+
+// const solveQuadEquation = function(a,b,x){
+//     return ((2*a*x) +b)
+// }
+// console.log(solveQuadEquation()) // {0}
+// console.log(solveQuadEquation(1, 4, 4)) // {-2}
+// console.log(solveQuadEquation(1, -1, -2)) // {2, -1}
+// console.log(solveQuadEquation(1, 7, 12)) // {-3, -4}
+// console.log(solveQuadEquation(1, 0, -4)) //{2, -2}
+// console.log(solveQuadEquation(1, -1, 0)) //{1, 0}
+
+//3.Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+
+const printArray = function(array){
+    for(const element of array){
+        console.log(element)
+    }
+
+}
+let arr = [2,3,4,5,67]
+printArray(arr)
+
+//4. Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+
+const showDateTime = () => {
+    const date = new Date()
+    const month = date.getMonth()
+    const day = date.getDate()
+    const year = date.getFullYear()
+    const hours = date.getHours()
+    const mins = date.getMinutes()
+    console.log(`0${month}/0${day}/${year} ${hours}:${mins}`)
+}
+showDateTime()
+
+//5. Declare a function name swapValues. This function swaps value of x to y.
+const swapValues = (a,b) =>{
+    let c;
+    c = a;
+    a = b
+    b = c
+    console.log(`${a}, ${b}`)
+}
+swapValues(3, 4) 
+swapValues(4, 5) 
+
+
+//6.Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+function reverseArray(arr){
+    if(arr.length <= 1)  return arr
+
+    let middle = Math.floor(arr.length /2)
+    let left = arr.slice(0,middle)
+    let right = arr.slice(middle)
+    return sortsArrays(reverseArray(left), reverseArray(right))
+}
+function sortsArrays(left, right){
+    const newArr = []
+    while(left.length && right.length){
+        if(left[0] > right[0]){
+            newArr.push(left.shift())
+        }else{
+            newArr.push(right.shift())
+        }
+    }
+    return [...newArr,...left,...right]
+}
+const array = [1, 2, 3, 4, 5]
+console.log(reverseArray(array))
+
+
+
+
+
+// const reverseArray = function(array){
+//     array.forEach(function(element,index,array){
+
+//         }
+//     })
+
+// }
