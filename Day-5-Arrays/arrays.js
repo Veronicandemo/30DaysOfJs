@@ -199,3 +199,34 @@ let userEmails = users.map((element,index,arr) => {
 })
  
 console.log(userEmails)
+const mcountries = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
+]
+
+
+///LEVEL 1
+// Declare an empty array;
+const emptyArray = []
+//2. Declare an array with more than 5 number of elements
+const withMore5 = [1,2,3,4,5,6,7,8]
+console.log(withMore5.length)
+
+//3. Get the first item, the middle item and the last item of the array
+const firstItem = withMore5[0]
+const middle = [(firstItem + withMore5.length) /2]
+const lastItem = withMore5.length -1
+console.log(`first Item:${firstItem}, middle Item:${middle}, last Item${lastItem}`)
+// Declare an array called mixedDataTypes, put different data types in the array and find the length of the array.
+//  The array size should be greater than 5
+
+
