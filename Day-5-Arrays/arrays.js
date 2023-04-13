@@ -229,4 +229,146 @@ console.log(`first Item:${firstItem}, middle Item:${middle}, last Item${lastItem
 // Declare an array called mixedDataTypes, put different data types in the array and find the length of the array.
 //  The array size should be greater than 5
 
+const mixedDataTypes = [1, 'Hopper', true, NaN, undefined, Symbol, BigInt]
+console.log(mixedDataTypes.length)
+
+// 6.Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
+
+const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+//7. Print the array using console.log()
+console.log(itCompanies)
+//8. Print the number of companies in the array
+console.log(itCompanies.length)
+//9. Print the first company, middle and last company
+const firstCamp = itCompanies[0]
+const middleCamp = itCompanies[Math.floor(itCompanies.length /2)]
+const lastCamp = itCompanies[itCompanies.length -1]
+console.log(firstCamp)
+console.log(middleCamp)
+console.log(lastCamp)
+//10 Print out each company
+console.log('***Each Company**')
+itCompanies.forEach(company => console.log(company))
+
+//11. Change each company name to uppercase one by one and print them out
+console.log('***To upperCase ***')
+itCompanies.forEach( company => console.log(company.toUpperCase()))
+
+//12. Print the array like as a sentence: 
+// Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+const itString = itCompanies.join(' ,')
+console.log(itString)
+
+//13.Check if a certain company exists in the itCompanies array. 
+// If it exist return the company else return a company is not found
+
+//14. Filter out companies which have more than one 'o' without the filter method
+
+//15. Sort the array using sort() method
+const sortedCompanies = itCompanies.sort()
+console.log(sortedCompanies)
+//16. Reverse the array using reverse() method
+console.log(sortedCompanies.reverse())
+//17. Slice out the first 3 companies from the array
+console.log(sortedCompanies.slice(0, 3))
+console.log(sortedCompanies.slice(-3))
+//18.Slice out the middle IT company or companies from the array
+const midIndex = (0 + sortedCompanies.length -1) /2
+console.log(midIndex)
+// console.log(sortedCompanies.slice(sortedCompanies[midIndex],4))
+
+//19. Remove the first IT company from the array
+console.log(itCompanies)
+console.log(itCompanies.splice(0,1))
+console.log(itCompanies)
+
+//20. Remove the middle IT company or companies from the array
+
+//21. Remove the last IT company from the array
+console.log(itCompanies.splice(-1))
+//22. Remove all IT companies
+console.log(itCompanies.splice())
+
+//24. First remove all the punctuations and change the string to 
+///////LEVEL 2////////////////////////////////////////////////////////////////
+//2. array and count the number of words in the array
+let text =
+'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+console.log(words.join(''))
+console.log(words.length)
+
+//3. In the following shopping cart add, remove, edit items
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+
+//4. add 'Meat' in the beginning of your shopping cart if it has not been already added
+shoppingCart.unshift('Meat')
+console.log(shoppingCart)
+//5. add Sugar at the end of you shopping cart if it has not been already added
+shoppingCart.push('Sugar')
+console.log(shoppingCart)
+
+//6. remove 'Honey' if you are allergic to honey
+console.log(shoppingCart.splice(4,1))
+console.log(shoppingCart)
+//7. modify Tea to 'Green Tea'
+console.log(shoppingCart[3] = 'Green Tea')
+console.log(shoppingCart)
+
+//8. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
+
+const newCountries = mcountries.forEach(country => {
+  if(country == 'Ethiopia'.toLowerCase()) console.log(country.toUpperCase())
+  else mcountries.push(country)
+})
+
+//9. In the webTechs array check if Sass exists in the array and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
+
+
+//10. Concatenate the following two variables and store it in a fullStack variable.
+
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node','Express', 'MongoDB']
+const fullStack = [...frontEnd,...backEnd]
+console.log(fullStack)
+
+/////////LEVEL 3 EXERCISE///////////////////////////////////////////
+//1. The following is an array of 10 students ages:
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+
+//2. Sort the array and find the min and max age
+const sortedAges = ages.sort()
+const minNum = Math.min.apply(Math, sortedAges)
+const maxNum = Math.max.apply(Math, sortedAges)
+console.log(minNum)
+console.log(maxNum)
+
+//ALTERNATIVELY
+console.log('***ES6**')
+console.log(Math.min(...sortedAges))
+console.log(Math.max(...sortedAges))
+
+//3. Find the median age(one middle item or two middle items divided by two)
+
+//4. Find the average age(all items divided by number of items)
+let averageAge = 0
+let length = ages.length
+const average = ages.forEach(element => Math.floor(averageAge += element / length))
+console.log(averageAge)
+
+//5. Find the range of the ages(max minus min)
+console.log(maxNum - minNum)
+
+//6. Compare the value of (min - average) and (max - average), use abs() method 1.
+const minAv = Math.floor(minNum - averageAge)
+const maxAv = Math.floor(maxNum - averageAge)
+console.log(`${Math.abs(minAv)} is less than  ${maxAv}`)
+//7 Slice the first ten countries from the countries array
+console.log(mcountries.slice(0,10))
+
+//8. Find the middle country(ies) in the countries array
+
+//9. Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+
+
 
