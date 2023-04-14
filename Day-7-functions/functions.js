@@ -32,8 +32,7 @@ console.log('***Returning values ***')
 function printFullName(){
     let firstNAme = 'Veronica'
     let lastName = 'Ndemo'
-    let space = ' '
-    let fullName = firstNAme + space + lastName
+    let fullName = `${firstNAme}  ${lastName}`
     return fullName
 }
 console.log(printFullName())
@@ -41,8 +40,8 @@ console.log(printFullName())
 function addTwoNums(){
     let numOne = 10
     let numTwo = 20
-    let result = numOne + numTwo
-    return result
+    // let result = numOne + numTwo
+    return numOne + numTwo
 }
 console.log(addTwoNums())
 
@@ -114,12 +113,11 @@ const square = n => n * n
 console.log(square(2))
 
 
-// Declare a function fullName and it print out your full name.
+//1,2. Declare a function fullName and it print out your full name.
 const myName = function (firstNAme, lastName){
-    console.log(`${firstNAme} ${lastName}`)
-
+    return `${firstNAme} ${lastName}`
 }
-myName('Kelvin', 'Ndemo')
+console.log(myName('Kelvin', 'Ndemo'))
 
 const changeToUpperCase = arr =>{
     const newArr = []
@@ -185,7 +183,7 @@ const circumOfCircle = (radius) => {
 console.log(circumOfCircle(14))
 //9. Density of a substance is calculated as follows:density= mass/volume. Write a function which calculates density.
 
-const density = (mass, volume) => {return mass/volume}
+const density = ((mass, volume) =>  mass/volume)
 console.log(density(400,20))
 
 //10. Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. 
@@ -274,11 +272,15 @@ checkSeason('')
 
 //15. Math.max returns its largest argument.
 //  Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
+console.log('***Find max***')
+const findMax = (a,x,y) => {
+    if(a > x && a > y) return a
+    else if(x > a && x > y) return x
+    else if(y > a && y > x) return y
+}
+console.log(findMax(0, 10, 5))
+console.log(findMax(0, -10, -2))
 
-
-// const findMax =  function (arg1, arg2, arg3){
-    
-// }
 
 // Exercises: Level 2
 //1. Linear equation is calculated as follows: ax + by + c = 0. 
@@ -293,9 +295,9 @@ console.log(solveLinEquation(2,3,4,6))
 
 // Quadratic equation is calculated as follows: ax2 + bx + c = 0. 
 //2. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
-
+// console.log('***Quadratic equation***')
 // const solveQuadEquation = function(a,b,x){
-//     return ((2*a*x) +b)
+//     return ((-a*a*x) - b * x)
 // }
 // console.log(solveQuadEquation()) // {0}
 // console.log(solveQuadEquation(1, 4, 4)) // {-2}
@@ -303,13 +305,15 @@ console.log(solveLinEquation(2,3,4,6))
 // console.log(solveQuadEquation(1, 7, 12)) // {-3, -4}
 // console.log(solveQuadEquation(1, 0, -4)) //{2, -2}
 // console.log(solveQuadEquation(1, -1, 0)) //{1, 0}
+// console.log('***Quadratic equation***')
+
 
 //3.Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
-
+console.log('each element')
 const printArray = function(array){
-    for(const element of array){
-        console.log(element)
-    }
+  array.forEach( element => {
+    return console.log(element)
+})
 
 }
 let arr = [2,3,4,5,67]
@@ -330,13 +334,13 @@ showDateTime()
 
 //5. Declare a function name swapValues. This function swaps value of x to y.
 const swapValues = (a,b) =>{
-    let c;
-    c = a;
-    a = b
-    b = c
+    let c; //declare with no value
+    c = a;  //c = 3
+    a = b  // a = 4
+    b = c  //b = 3
     console.log(`${a}, ${b}`)
 }
-swapValues(3, 4) 
+swapValues(3, 4)
 swapValues(4, 5) 
 
 
@@ -361,16 +365,116 @@ function sortsArrays(left, right){
     return [...newArr,...left,...right]
 }
 const array = [1, 2, 3, 4, 5]
+console.log(reverseArray(['A', 'B', 'C']))
 console.log(reverseArray(array))
+//7. Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+
+const capitalizeArray = (arr) => {
+    let capitalizearray = []
+    arr.forEach(element => {
+        return console.log((element.toUpperCase()))
+    })
+}
+const mycountries = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Denmark',
+    'Ethiopia',
+    'Finland',
+    'Germany',
+    'Hungary',
+    'Ireland',
+    'Japan',
+    'Kenya'
+  ]
+  console.log(mycountries)
+  capitalizeArray(mycountries)
+
+// 8.  Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+
+const addItem = (item) => {
+    const newArr =  []
+    newArr.unshift(item)
+    return newArr
+}
+console.log(addItem('sugar'))
+//9. Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+
+//10. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+
+const sumOfNumbers = (...numbers) => {
+    let sum = 0
+    for(const number of numbers){
+        sum += number
+    }
+    console.log(sum)
+}
+sumOfNumbers(1,2,3,4,5,6,7,8,9,10)
+//11. Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+
+const sumOfOdds = (...numbers) => {
+    let sum = 0
+    for(const num of numbers){
+        if (num % 2 !== 0){
+            sum += num
+        }
+    }
+    console.log(sum)
+}
+sumOfOdds(1,2,3,4,5,6,7,8,9,10)
+
+//12. Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+const sumOfEven = (...numbers) => {
+    let sum = 0
+    for(const num of numbers){
+        if (num % 2 === 0){
+            sum += num
+        }
+    }
+    console.log(sum)
+}
+sumOfEven(1,2,3,4,5,6,7,8,9,10)
+
+//13. Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+const evensAndOdds = (int) => {
+    let count = 0
+    for(let i = 0; i <= int.length; i++){
+        if(i % 2 === 0){
+
+            return console.log(`The number of even is ${count += 1}`)
+        } 
+            
+        if(i % 2 !== 0) return console.log(`The number of odds is ${count += 1}`)
+    }
+}
+evensAndOdds(100)
 
 
+const sum = (...args) => {
+    let sum = 0
+    args.forEach(element => sum += element)
+    console.log(sum)
+}
+sum(1, 2, 3)
+sum(1, 2, 3, 4) 
+
+// Writ a function which generates a randomUserIp.
+function generatesIp(){
+    const ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255));
+console.log(ip)
+}
+generatesIp()
+
+//16. Write a function which generates a randomMacAddress
+
+//17. Declare a function name randomHexaNumberGenerator. 
+// When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+
+//18. Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
 
 
+///////////////////////LEVEL 3///////////////////////////////////
 
-// const reverseArray = function(array){
-//     array.forEach(function(element,index,array){
 
-//         }
-//     })
-
-// }
