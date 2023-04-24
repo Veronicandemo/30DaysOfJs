@@ -93,7 +93,7 @@ console.log('****************')
 
 for(let i = 0; i <= 6; i++){
   if( i === 3){
-    break
+    break;
   }
   console.log(i)
 }
@@ -160,13 +160,18 @@ console.log('********while loop********')
   }while(z <= 10)
 
   //6. Using loop print the following pattern
-
+  console.log(`i  i^2  i^3`)
+for(let i = 0; i <= 10; i++)
+console.log(`${i}  ${i**2}    ${i*i*i}`)
   //7.Use do while loop to iterate from 0 to 100 and print only even numbers
+  //7. using a for loop
+  console.log('********for loop even numbers********')
+  for(let i = 0; i <= 100; i++){
+    if(i % 2 === 0) console.log(i)
+  }
   console.log('********while loop  while loop even numbers********')
-
 let num = 0
 do{
-
   if(num % 2 === 0){
     console.log(num)
   }
@@ -184,31 +189,26 @@ console.log('******* for loop of  prime numbers*********')
 
 //9. Use for loop to iterate from 0 to 100 and print only prime numbers
 //Prime numbers are those numbers that have no divisor other than 1 and the number itself
- let w = 1
-for(let i = 1; i <= 100; i++){
-  if(i % i === 0  &&  i / w === 0){
-    console.log(i)
-  }
-}
+// for(let i = 2; i <= 100; i++){
+//   if(i % i === 0){
+//     if(i % 1 === 0){
+//       console.log(i)
+//     }
+
+//   }
+
+//   }
 
 //10. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
-let summation = 0
-const maxnum = 100
-for(let i = 0; i <= maxnum; i++){
-  sum += i
+let sums = 0
+for(let i = 0; i <= 100; i++){
+  sums += i
 }
-console.log(`The sum of all numbers from 0 to 100 is ${sum}`)
-
-// 13. Develop a small script which generate array of 5 random numbers
-// const nums = Math.floor(Math.random()*5) +1
-// const numsArr = []
-// for(num  in nums){
-//   console.log(numsArr.push(num.shift()))
-// }
+console.log(`Summation of all numbers between 0 and 100 is ${sums}`)
 
 console.log(" ****Sum of odd and even ****")
 //Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
-let x;
+// let x;
 let sumEven = 0;
 let sumOdd = 0;
 for(i = 0; i <= 100; i++){
@@ -253,17 +253,6 @@ console.log(id)
 // In above countries array, check if there is a country or countries containing the word 'land'.
 //  If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
 
-// let landCountries = []
-// const string = 'land'
-// for(let landCountry = 0; landCountries < countries.length; landCountries++){
-
-//   for(landCountry in countries){
-//     if(landCountry.matchAll(/string/g)){
-//       console.log(landCountries.push())
-
-//     }
-//   }
-// }
 
 
 ///LEVEL 3 EXERSICE
@@ -277,20 +266,23 @@ const sortedCountries = countries
 console.log(sortedCountries)
 
 //Sort the webTechs array and mernStack array
+console.log('sorted webTechs and Mernstack')
 console.log(webTechs.sort())
 console.log(mernStack.sort())
 
 // Extract all the countries contain the word 'land' from the countries array and print it as array
 
-// const landarr = function(countries){
-//   countries.forEach(element => {
-//     const newArr = []
-//     if(element.contains('')){
-//       newArr.push(element)
-//     }
-//   });
-// }
-// console.log(landarr(countries))
+const landarr = function(countries){
+  const newArr = []
+  countries.forEach(element => {
+    if(element.includes('land')){
+      newArr.push(element)
+    }
+  });
+  console.log(newArr)
+}
+console.log(countries)
+landarr(countries)
 
 //Find the country containing the hightest number of characters in the countries array
 // const highestChar = function(countries){
@@ -298,3 +290,4 @@ console.log(mernStack.sort())
 //     if(element.length)
 //   })
 // }
+
