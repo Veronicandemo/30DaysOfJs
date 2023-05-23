@@ -21,7 +21,7 @@ const person = {
          return `${this.firstName} ${this.lastName}`
         },
     'phone Number': '+254112490586',
-    getPersonInfo: function() { 
+    getPersonInfo: function(a,b) {
         return `I am ${this.getFullName()} and i live in ${this.city} ${this.country}. I am ${this.age}.`
     },
 }
